@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chonchos Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Main Content */
+        main {
+            padding-bottom: 80px; /* Space for fixed footer */
+        }
+
+        section {
+            margin: 40px auto; /* Consistent margin for sections */
+            max-width: 800px; /* Limit width to improve readability */
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #e0f7ff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #004080;
+        }
+
+        th {
+            background-color: #004080;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #b3e0ff;
+        }
+
+        td {
+            font-size: 1.1em;
+        }
+
+        /* Improved link appearance */
+        a.menu-link {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.menu-link:hover {
+            color: #000033;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Chonchos Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurant.html">Chonchos Restaurant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Dining Experience</h2>
+            <p>Here at Chonchos Inn, we offer the most luxurious rooms with all you can desire, we truly are the best!</p>
+            <p>We offer a wide variety of breakfast, lunch, and dinner. We offer a breakfast in bed and a 24-hour room service menu. We have one of the most luxurious dining experiences here at Chonchos Inn.</p>
+        </section>
+        <section>
+            <h2>Restaurant Hours</h2>
+            <table>
+                <tr>
+                    <th>Meal</th>
+                    <th>Time</th>
+                    <th>Menu</th>
+                </tr>
+                <tr>
+                    <td>Breakfast</td>
+                    <td>6:00 AM - 11:00 AM</td>
+                    <td><a href="breakfast.pdf" target="_blank" class="menu-link">View Menu</a></td>
+                </tr>
+                <tr>
+                    <td>All Day Dining</td>
+                    <td>11:00 AM - 12:00 AM</td>
+                    <td><a href="alldaydining.pdf" target="_blank" class="menu-link">View Menu</a></td>
+                </tr>
+                <tr>
+                    <td>Dinner</td>
+                    <td>5:00 PM - 12:00 AM</td>
+                    <td><a href="dinner.pdf" target="_blank" class="menu-link">View Menu</a></td>
+                </tr>
+                <tr>
+                    <td>Drinks</td>
+                    <td>11:00 AM - 12:00 AM</td>
+                    <td><a href="drinks.pdf" target="_blank" class="menu-link">View Menu</a></td>
+                </tr>
+            </table>
+        </section>
+        <section class="image-gallery">
+            <div class="gallery-item">
+                <img src="image6.jpg" alt="Romantic Atmosphere">
+                <div class="caption">Romantic Atmosphere</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image7.jpg" alt="Warm Appetizer">
+                <div class="caption">Warm Appetizer</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image10.jpg" alt="Sweet Dessert">
+                <div class="caption">Sweet Dessert</div>
+            </div>
+        </section>
+        <section class="image-gallery">
+            <div class="gallery-item">
+                <img src="image8.jpg" alt="Fresh Salad">
+                <div class="caption">Fresh Salad</div>
+            </div>
+            <div class="gallery-item">
+                <img src="image9.jpg" alt="Divine Entree">
+                <div class="caption">Divine Entree</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Chonchos Inn | 1-800-Choncho | 123 Silly Street, Falmouth MA</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>

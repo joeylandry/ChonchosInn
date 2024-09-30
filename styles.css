@@ -1,0 +1,182 @@
+/* General Page Layout */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0f7ff; /* Super light blue background */
+    text-align: center; /* Centered text */
+}
+
+header {
+    background: url('image11.jpg'); /* Replace 'your-image.jpg' with your image path */
+    background-size: cover; /* Make sure the image covers the entire header */
+    text-align: center;
+    padding: 60px 0; /* Increase padding to give enough space for the background image */
+    font-family: 'Blackadder ITC', cursive;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure it stays on top of other elements */
+    color: white; /* Set text color to white to make it visible over the background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+}
+
+h1, h2 {
+    font-family: 'Blackadder ITC', cursive; /* Apply Blackadder ITC to all headers */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: navy;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Blackadder ITC', cursive;
+}
+
+nav ul li a:hover {
+    color: lightblue;
+}
+
+/* Main Content */
+main {
+    margin-top: 220px; /* Add space to prevent content from being hidden behind the fixed header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+section {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: flex; /* Change to flex to make images appear in a row */
+    flex-wrap: wrap; /* Allow images to wrap if needed */
+    justify-content: center; /* Center the images in the container */
+    gap: 10px;
+    max-width: 100%; /* Full width for gallery container */
+    margin: 20px auto; /* Center the gallery with top and bottom margin */
+    clear: both; /* Ensure each section starts on a new line */
+}
+
+.gallery-item {
+    width: 150px; /* Set a smaller width for each item to keep them in a compact format */
+    text-align: center;
+    flex: 0 0 auto; /* Prevent items from stretching */
+}
+
+.gallery-item img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Keep aspect ratio */
+    object-fit: cover; /* Ensure the image covers its container */
+}
+
+.gallery-item .caption {
+    margin-top: 5px;
+    font-size: 0.9em; /* Slightly smaller caption font size */
+    color: #004080;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form label, form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing but not horizontal */
+}
+
+form input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-family: 'Blackadder ITC', cursive;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #004080; /* Initial link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+.footer a:hover {
+    color: #000033; /* Dark navy blue color on hover */
+    text-decoration: none; /* Keep the underline removed on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table */
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header, footer {
+        text-align: center;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    .image-gallery {
+        justify-content: center; /* Ensure images are centered on smaller screens */
+    }
+
+    .gallery-item {
+        width: 100px; /* Reduce size for smaller screens */
+    }
+}
