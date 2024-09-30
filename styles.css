@@ -177,11 +177,13 @@ th, td {
         font-size: 0.8em;
     }
 
-    .image-gallery {
-        justify-content: center; /* Ensure images are centered on smaller screens */
+    image-gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images in the gallery */
     }
 
     .gallery-item {
-        width: 100px; /* Reduce size for smaller screens */
+        width: 90%; /* Make the image item take up most of the width of the screen */
+        margin-bottom: 20px; /* Add spacing between items */
     }
 }
