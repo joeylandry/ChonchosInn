@@ -163,6 +163,11 @@ th, td {
     nav ul {
         flex-direction: column;
     }
+    header {
+        padding: 20px 0; /* Decrease padding for mobile */
+        max-height: 200px; /* Adjust as needed to limit the height */
+        background-size: contain; /* Optionally chang
+    }
 
     header, footer {
         text-align: center;
