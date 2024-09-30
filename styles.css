@@ -179,11 +179,4 @@ th, td {
     .gallery-item {
         width: 100px; /* Reduce size for smaller screens */
     }
-    main {
-        margin-top: 100px; /* Increase margin-top to add extra space below the header */
-    }
-    
-    h1, h2 {
-        margin-top: 10px; /* Additional margin for the first heading on each page */
-    }
 }
