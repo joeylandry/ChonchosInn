@@ -180,7 +180,7 @@ th, td {
         width: 100px; /* Reduce size for smaller screens */
     }
     main {
-        margin-top: 160px; /* Increase margin-top to add extra space below the header */
+        margin-top: 300px; /* Increase margin-top to add extra space below the header */
     }
     
     h1, h2 {
