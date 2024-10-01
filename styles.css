@@ -177,6 +177,8 @@ th, td {
 
     .image-gallery {
         display: block; /* vertical stack */
+        flex-direction: column; /* stack items vertically */
+        align-items: center; 
     }
 
     .gallery-item {
