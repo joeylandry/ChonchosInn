@@ -1,104 +1,107 @@
-/* General Page Layout */
+/* Page layout style */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #e0f7ff; /* Super light blue background */
-    text-align: center; /* Centered text */
+    background-color: #e0f7ff;
+    text-align: center;
 }
 
 header {
-    background: url('image11.jpg'); /* Replace 'your-image.jpg' with your image path */
-    background-size: cover; /* Make sure the image covers the entire header */
+    background: url('image11.jpg');
+    background-size: cover; /* covers entire header */
     text-align: center;
-    padding: 60px 0; /* Increase padding to give enough space for the background image */
+    padding: 60px 0;
     font-family: 'Blackadder ITC', cursive;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000; /* Make sure it stays on top of other elements */
-    color: white; /* Set text color to white to make it visible over the background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better contrast */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000b3; /* more contrast */
 }
 
+/* Heading styles */
 h1, h2 {
-    font-family: 'Blackadder ITC', cursive; /* Apply Blackadder ITC to all headers */
+    font-family: 'Blackadder ITC', cursive; /* Blackadder ITC to all headers */
 }
 
+/* Navigation style */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: navy;
-    display: flex;
+    display: flex; /* list is in a row */
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* spacing */
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-family: 'Blackadder ITC', cursive;
 }
 
 nav ul li a:hover {
-    color: lightblue;
+    color: #add8e6;
 }
 
-/* Main Content */
+/* Main pages style */
 main {
-    margin-top: 220px; /* Add space to prevent content from being hidden behind the fixed header */
-    padding: 20px;
-    display: flex;
+    margin-top: 220px; /* space to prevent content being hidden behind header */
+    padding: 20px; 
+    display: flex; /* makes main element flex container */
     flex-direction: column;
     align-items: center;
     margin-bottom: 120px;
 }
 
 section {
-    max-width: 600px;
+    max-width: 600px; /* readability */
     width: 100%;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* spaces under sections */
 }
 
-/* Image Gallery Styles */
+/* Gallery style */
 .image-gallery {
-    display: flex; /* Change to flex to make images appear in a row */
-    flex-wrap: wrap; /* Allow images to wrap if needed */
-    justify-content: center; /* Center the images in the container */
-    gap: 10px;
-    max-width: 100%; /* Full width for gallery container */
-    margin: 20px auto; /* Center the gallery with top and bottom margin */
-    clear: both; /* Ensure each section starts on a new line */
+    display: flex; /* image in row, flex container */
+    flex-wrap: wrap; /* wrap images if needed */
+    justify-content: center;
+    gap: 10px; /*space*/
+    max-width: 100%;
+    margin: 20px auto; /* center gallery with top and bottom margin */
+    clear: both; /* start each section on a new line */
 }
 
 .gallery-item {
-    width: 150px; /* Set a smaller width for each item to keep them in a compact format */
+    width: calc(25% - 20px); /* each photo occupies 1/4 gallery */
+    max-width: 300px; /* prevents images from being to large on screen */
     text-align: center;
-    flex: 0 0 auto; /* Prevent items from stretching */
+    flex: 1 1 auto; /* grow or shrink based on space */
 }
 
 .gallery-item img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Keep aspect ratio */
-    object-fit: cover; /* Ensure the image covers its container */
+    width: 100%; /* image fill container */
+    height: auto; /* aspect ratio */
+    object-fit: cover; /* make sure image covers container */
 }
 
 .gallery-item .caption {
     margin-top: 5px;
-    font-size: 0.9em; /* Slightly smaller caption font size */
+    font-size: 0.9em;
     color: #004080;
 }
 
-/* Form Styles */
+/* Form style */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* rows */
+    flex-direction: column; /* column */
     align-items: center;
     width: 100%;
 }
@@ -110,7 +113,7 @@ form label, form input, form textarea {
 }
 
 form textarea {
-    resize: vertical; /* Allow vertical resizing but not horizontal */
+    resize: vertical; /* vertical resizing allowed */
 }
 
 form input[type="submit"] {
@@ -121,7 +124,7 @@ form input[type="submit"] {
 
 /* Footer */
 .footer {
-    background-color: lightblue;
+    background-color: #add8e6;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -132,21 +135,21 @@ form input[type="submit"] {
 }
 
 .footer a {
-    color: #004080; /* Initial link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the text bold */
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .footer a:hover {
-    color: #000033; /* Dark navy blue color on hover */
-    text-decoration: none; /* Keep the underline removed on hover */
+    color: #000033; 
+    text-decoration: none;
 }
 
-/* Table Styles */
+/* Table style */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px auto; /* Center the table */
+    margin: 20px auto;
 }
 
 table, th, td {
@@ -158,15 +161,10 @@ th, td {
     text-align: center;
 }
 
-/* Mobile Responsiveness */
+/* Mobile style */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-    }
-    header {
-        padding: 20px 0; /* Decrease padding for mobile */
-        max-height: 200px; /* Adjust as needed to limit the height */
-        background-size: contain; /* Optionally chang
+        flex-direction: column; /* section vertical stack */
     }
 
     header, footer {
@@ -174,16 +172,22 @@ th, td {
     }
 
     table {
-        font-size: 0.8em;
+        font-size: 0.8em; /* smaller font */
     }
 
-    image-gallery {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center; /* Center images in the gallery */
+    .image-gallery {
+        justify-content: center; /* center image */
     }
 
     .gallery-item {
-        width: 90%; /* Make the image item take up most of the width of the screen */
-        margin-bottom: 20px; /* Add spacing between items */
+        width: 100px; /* smaller image */
+    }
+
+    main {
+        margin-top: 250px; /* add extra space below the header */
+    }
+    
+    h1, h2 {
+        margin-top: 20px; /* margin for the first heading on each page */
     }
 }
