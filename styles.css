@@ -175,31 +175,35 @@ th, td {
         font-size: 0.8em; /* smaller font */
     }
 
-    .image-gallery {
-        display: block; /* ensure it’s treated as a block container */
-        width: 100vw; /* take up the full viewport width */
-        margin: 0; /* remove all margins */
-        padding: 0; /* remove all padding */
+     .image-gallery {
+        width: 100vw !important; /* force gallery to take the full viewport width */
+        display: flex !important;
+        flex-direction: column !important; /* force items to stack vertically */
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box;
     }
 
     .gallery-item {
-        width: 100vw; /* make sure each item takes up the entire viewport width */
-        margin: 0; /* remove any margin between items */
-        padding: 0; /* remove padding to ensure no gaps */
+        width: 100vw !important; /* force each item to take full viewport width */
+        margin: 0 !important; /* remove any margin around items */
+        padding: 0 !important; /* remove padding */
+        box-sizing: border-box !important;
     }
 
     .gallery-item img {
-        width: 100vw; /* take up the full viewport width */
-        height: calc(100vw * 0.75); /* adjust to maintain a reasonable aspect ratio, or set it to 100vh if you want full height */
-        object-fit: cover; /* ensure the image covers the entire area without distortion */
-        display: block; /* remove inline spacing from images */
+        width: 100vw !important; /* force image to fill the viewport width */
+        height: auto !important; /* maintain aspect ratio */
+        display: block !important;
+        object-fit: cover !important; /* ensure image covers container */
     }
 
     .gallery-item .caption {
-        width: 100%; /* ensure captions are full width */
-        padding: 10px; /* add some padding for better readability */
-        box-sizing: border-box; /* include padding in width */
-        font-size: 1em; /* adjust caption size as needed */
+        width: 100% !important; /* make caption match the image width */
+        padding: 10px !important; /* add some padding for better readability */
+        box-sizing: border-box;
+        font-size: 1em;
+        margin-top: 5px !important;
     }
 
     main {
