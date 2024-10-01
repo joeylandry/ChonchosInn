@@ -181,6 +181,13 @@ th, td {
 
     .gallery-item {
         width: 100px; /* smaller image */
+        max-width: 100%; /* override desktop max-wdith */
+        margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%; /* fill the container */
+        height: auto; /* keep aspect ratio */
     }
 
     main {
