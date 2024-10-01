@@ -176,7 +176,7 @@ th, td {
     }
 
     .image-gallery {
-        display: block; /* vertical stack */
+        display: flex; /* vertical stack */
         flex-direction: column; /* stack items vertically */
         align-items: center; 
     }
