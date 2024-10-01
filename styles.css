@@ -179,12 +179,14 @@ th, td {
         display: flex; /* vertical stack */
         flex-direction: column; /* stack items vertically */
         align-items: center; 
+        width: 100vw; /* set gallery to full viewport width */
+        margin: 0; /* remove margins */
+        padding: 0; /* remove any padding */
     }
 
     .gallery-item {
         width: 100px; /* smaller image */
-        max-width: 100%; /* override desktop max-wdith */
-        margin-bottom: 20px;
+        margin: 0;
     }
 
     .gallery-item img {
