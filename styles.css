@@ -176,31 +176,30 @@ th, td {
     }
 
     .image-gallery {
-        display: block; /* display as a block element */
-        width: 100vw; /* ensure gallery spans full viewport width */
-        margin: 0; /* remove any margin */
-        padding: 0; /* remove any padding */
+        display: block; /* ensure it’s treated as a block container */
+        width: 100vw; /* take up the full viewport width */
+        margin: 0; /* remove all margins */
+        padding: 0; /* remove all padding */
     }
 
     .gallery-item {
-        width: 100vw; /* each image takes the full width of the viewport */
-        max-width: 100%; /* ensure no constraint on width */
-        margin: 0; /* remove any margin */
-        padding: 0; /* remove any padding */
-        text-align: center;
+        width: 100vw; /* make sure each item takes up the entire viewport width */
+        margin: 0; /* remove any margin between items */
+        padding: 0; /* remove padding to ensure no gaps */
     }
 
     .gallery-item img {
-        width: 100vw; /* make image fill the entire width of the viewport */
-        height: auto; /* maintain aspect ratio */
-        object-fit: cover; /* ensure image covers the container */
-        display: block; /* removes inline space between images */
+        width: 100vw; /* take up the full viewport width */
+        height: calc(100vw * 0.75); /* adjust to maintain a reasonable aspect ratio, or set it to 100vh if you want full height */
+        object-fit: cover; /* ensure the image covers the entire area without distortion */
+        display: block; /* remove inline spacing from images */
     }
 
     .gallery-item .caption {
-        width: 100%; /* caption should also take the full width */
-        margin-top: 10px; /* add a bit of space above the caption */
-        font-size: 1em; /* adjust caption size if needed */
+        width: 100%; /* ensure captions are full width */
+        padding: 10px; /* add some padding for better readability */
+        box-sizing: border-box; /* include padding in width */
+        font-size: 1em; /* adjust caption size as needed */
     }
 
     main {
