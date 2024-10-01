@@ -176,29 +176,37 @@ th, td {
     }
 
     .image-gallery {
-        display: flex; /* vertical stack */
-        flex-direction: column; /* stack items vertically */
-        align-items: center; 
-        width: 100vw; /* set gallery to full viewport width */
-        margin: 0; /* remove margins */
+        display: block; /* display as a block element */
+        width: 100vw; /* ensure gallery spans full viewport width */
+        margin: 0; /* remove any margin */
         padding: 0; /* remove any padding */
     }
 
     .gallery-item {
-        width: 100px; /* smaller image */
-        margin: 0;
+        width: 100vw; /* each image takes the full width of the viewport */
+        max-width: 100%; /* ensure no constraint on width */
+        margin: 0; /* remove any margin */
+        padding: 0; /* remove any padding */
+        text-align: center;
     }
 
     .gallery-item img {
-        width: 100%; /* fill the container */
-        height: auto; /* keep aspect ratio */
-        object-fit: cover;
+        width: 100vw; /* make image fill the entire width of the viewport */
+        height: auto; /* maintain aspect ratio */
+        object-fit: cover; /* ensure image covers the container */
+        display: block; /* removes inline space between images */
+    }
+
+    .gallery-item .caption {
+        width: 100%; /* caption should also take the full width */
+        margin-top: 10px; /* add a bit of space above the caption */
+        font-size: 1em; /* adjust caption size if needed */
     }
 
     main {
         margin-top: 250px; /* add extra space below the header */
     }
-    
+
     h1, h2 {
         margin-top: 20px; /* margin for the first heading on each page */
     }
