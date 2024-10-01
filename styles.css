@@ -176,34 +176,34 @@ th, td {
     }
 
     .image-gallery {
-        display: grid !important; /* use grid to control layout */
+        display: grid; /* use grid to control layout */
         grid-template-columns: 1fr; /* single column layout for stacking */
         gap: 20px; /* space between images */
-        width: 100vw !important; /* full viewport width */
-        margin: 0 !important; /* remove extra margin */
-        padding: 0 !important; /* remove extra padding */
+        width: 100%; /* use 100% width rather than viewport width */
+        margin: 0 auto; /* center-align gallery with zero margin */
+        padding: 0; /* remove any padding */
     }
 
     .gallery-item {
-        width: 100vw !important; /* force full width for each item */
-        max-width: 100% !important; /* no constraint on width */
-        margin: 0 !important; /* remove margins */
-        padding: 0 !important; /* remove padding */
+        width: 95%; /* slightly reduce the width for better fit and spacing */
+        max-width: 400px; /* add a max-width to avoid excessive size */
+        margin: 0 auto; /* center-align each gallery item */
+        padding: 0; /* remove padding */
         box-sizing: border-box; /* ensure padding/margin are included */
     }
 
     .gallery-item img {
-        width: 100vw !important; /* make image fill full viewport width */
-        height: auto !important; /* maintain aspect ratio */
-        display: block !important; /* remove any inline space */
-        object-fit: cover !important; /* make sure image fills container */
+        width: 100%; /* make image fill the entire width of its container */
+        height: auto; /* maintain aspect ratio */
+        display: block; /* remove any inline space */
+        object-fit: cover; /* ensure image covers container */
     }
 
     .gallery-item .caption {
-        width: 100% !important; /* make caption full width */
-        padding: 10px !important; /* add some padding for readability */
-        font-size: 1em !important; /* standardize caption font size */
-        margin-top: 5px !important; /* space above the caption */
+        width: 100%; /* make caption full width */
+        padding: 10px; /* add some padding for readability */
+        font-size: 1em; /* standardize caption font size */
+        margin-top: 5px; /* space above the caption */
         box-sizing: border-box;
     }
 
