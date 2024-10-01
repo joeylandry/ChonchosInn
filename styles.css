@@ -164,7 +164,7 @@ th, td {
 /* Mobile style */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* section vertical stack */
+        flex-direction: column; /* stack navigation items vertically */
     }
 
     header, footer {
@@ -175,35 +175,36 @@ th, td {
         font-size: 0.8em; /* smaller font */
     }
 
-     .image-gallery {
-        width: 100vw !important; /* force gallery to take the full viewport width */
-        display: flex !important;
-        flex-direction: column !important; /* force items to stack vertically */
-        margin: 0 !important;
-        padding: 0 !important;
-        box-sizing: border-box;
+    .image-gallery {
+        display: grid !important; /* use grid to control layout */
+        grid-template-columns: 1fr; /* single column layout for stacking */
+        gap: 20px; /* space between images */
+        width: 100vw !important; /* full viewport width */
+        margin: 0 !important; /* remove extra margin */
+        padding: 0 !important; /* remove extra padding */
     }
 
     .gallery-item {
-        width: 100vw !important; /* force each item to take full viewport width */
-        margin: 0 !important; /* remove any margin around items */
+        width: 100vw !important; /* force full width for each item */
+        max-width: 100% !important; /* no constraint on width */
+        margin: 0 !important; /* remove margins */
         padding: 0 !important; /* remove padding */
-        box-sizing: border-box !important;
+        box-sizing: border-box; /* ensure padding/margin are included */
     }
 
     .gallery-item img {
-        width: 100vw !important; /* force image to fill the viewport width */
+        width: 100vw !important; /* make image fill full viewport width */
         height: auto !important; /* maintain aspect ratio */
-        display: block !important;
-        object-fit: cover !important; /* ensure image covers container */
+        display: block !important; /* remove any inline space */
+        object-fit: cover !important; /* make sure image fills container */
     }
 
     .gallery-item .caption {
-        width: 100% !important; /* make caption match the image width */
-        padding: 10px !important; /* add some padding for better readability */
+        width: 100% !important; /* make caption full width */
+        padding: 10px !important; /* add some padding for readability */
+        font-size: 1em !important; /* standardize caption font size */
+        margin-top: 5px !important; /* space above the caption */
         box-sizing: border-box;
-        font-size: 1em;
-        margin-top: 5px !important;
     }
 
     main {
