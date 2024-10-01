@@ -176,7 +176,7 @@ th, td {
     }
 
     .image-gallery {
-        justify-content: center; /* center image */
+        display: block; /* vertical stack */
     }
 
     .gallery-item {
@@ -188,6 +188,7 @@ th, td {
     .gallery-item img {
         width: 100%; /* fill the container */
         height: auto; /* keep aspect ratio */
+        object-fit: cover;
     }
 
     main {
